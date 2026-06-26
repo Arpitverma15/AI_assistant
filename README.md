@@ -1,5 +1,7 @@
 # 🎓 RankUp — Smart AI Learning Assistant 🚀
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-brightgreen?style=for-the-badge&logo=vercel)](https://rank-up-learning-assistant-jcnq0l8nv.vercel.app/)
+
 RankUp is a next-generation, AI-powered learning assistant designed to transform static study materials into interactive learning experiences. Upload documents, generate custom flashcards & quizzes, collaborate in real-time study rooms, and chat with an intelligent tutor to master any subject.
 
 ---
@@ -181,7 +183,7 @@ Deploy RankUp in a split-architecture setup for maximum performance and cost eff
    - `GROQ_API_KEY` = *Your Groq API Key*
    - `MONGODB_URI` = *Your MongoDB Atlas connection string*
    - `JWT_SECRET` = *Your custom secret key for signing tokens*
-   - `CLIENT_URL` = *Your Vercel deployment URL (e.g. `https://your-app.vercel.app` — update this once you have your Vercel URL)*
+   - `CLIENT_URL` = `https://rank-up-learning-assistant-jcnq0l8nv.vercel.app` (your actual frontend domain on Vercel)
 
 ---
 
@@ -194,9 +196,10 @@ Deploy RankUp in a split-architecture setup for maximum performance and cost eff
    - **Build Command:** `npm run build`
    - **Output Directory:** `dist`
 3. **Environment Variables:**
-   Configure these in Vercel before hitting Deploy:
-   - `VITE_API_URL` = `https://your-backend-on-render.onrender.com/api` (use your actual Render backend service URL)
-   - `VITE_SOCKET_URL` = `https://your-backend-on-render.onrender.com` (your backend URL without the `/api` path)
+   Configure these in Vercel:
+   - `VITE_API_URL` = `https://rankup-learningassistant.onrender.com/api` (your actual backend service URL on Render)
+   - `VITE_SOCKET_URL` = `https://rankup-learningassistant.onrender.com` (your actual backend WebSocket URL on Render)
+   - `VITE_GOOGLE_CLIENT_ID` = `854831309924-22cbj8lh3qpfp34v35br1q7f0gh31b4a.apps.googleusercontent.com` (your Google OAuth Client ID)
 4. **Deploy:** Click **Deploy**. Vercel will handle the build. The pre-configured `frontend/vercel.json` file will automatically ensure React Router works correctly when pages are reloaded or navigated to directly.
 
 ---
